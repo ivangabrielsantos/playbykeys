@@ -230,4 +230,21 @@ window.addEventListener("keydown", ({ keyCode }) => {
 
   // Press P
   if (keyCode === 80) return playE5();
-}); 
+});
+
+// Add a function to toggle the class
+const toggleKeyLettersVisibility = () => {
+  const keyLetterButtons = document.querySelectorAll('.key-letter');
+  const showKeysCheckbox = document.getElementById('show-keys-checkbox');
+
+  keyLetterButtons.forEach(button => {
+    if (showKeysCheckbox.checked) {
+      button.style.display = 'block';
+    } else {
+      button.style.display = 'none';
+    }
+  });
+};
+
+// Add an event listener to the checkbox
+document.getElementById('show-keys-checkbox').addEventListener('change', toggleKeyLettersVisibility);
