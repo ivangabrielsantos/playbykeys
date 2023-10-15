@@ -7,7 +7,7 @@ function playOnEnter(id) {
 }
 
 function play(id) {
-  let audio = new Audio('./audio/' + id + '.mp3');
+  let audio = new Audio('./sound/' + id + '.mp3');
   audio.play();
 
   audio.addEventListener("play", (event) => {
