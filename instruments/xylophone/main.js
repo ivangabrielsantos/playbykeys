@@ -1,4 +1,23 @@
 let isMouseDown = false;
+let areParagraphsHidden = false; // Track the state of paragraphs
+
+function toggleParagraphs() {
+  const paragraphs = document.querySelectorAll('p');
+  if (areParagraphsHidden) {
+    // Show paragraphs
+    paragraphs.forEach(paragraph => {
+      paragraph.style.display = 'block';
+    });
+  } else {
+    // Hide paragraphs
+    paragraphs.forEach(paragraph => {
+      paragraph.style.display = 'none';
+    });
+  }
+  areParagraphsHidden = !areParagraphsHidden; // Toggle the state
+}
+
+
 
 function playOnEnter(id) {
   if (isMouseDown) {
@@ -7,7 +26,7 @@ function playOnEnter(id) {
 }
 
 function play(id) {
-  let audio = new Audio('./sound/' + id + '.mp3');
+  let audio = new Audio('./audio/' + id + '.mp3');
   audio.play();
 
   audio.addEventListener("play", (event) => {
