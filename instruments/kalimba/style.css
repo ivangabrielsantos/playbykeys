@@ -10,7 +10,11 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(#403075, #882D61);
+    background-image: url("images/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 .kalimba {
@@ -277,4 +281,4 @@ header input {
 .active {
     box-shadow: 0 3px 4px 0 #DBEDF3;
     opacity: 0.5;
-  }
+}

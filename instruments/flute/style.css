@@ -9,7 +9,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(#403075, #882D61);
+  background-image: url("images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .container img {
@@ -160,14 +164,7 @@ border: none;
   transition: all 0.3s ease;
 }
 
-
-
-
-
-
-
 /* Rest of your CSS remains the same */
-
 
 .keys-checkbox input:checked::before {
   left: 35px;
@@ -177,10 +174,9 @@ border: none;
 .wrapper {
   padding: 35px 40px;
   border-radius: 20px;
-  background: #141414;
+  background: #fff;
   position: relative;
 }
-
 
 .container {
   position: relative;
@@ -188,7 +184,7 @@ border: none;
 
 .wrapper header {
   display: flex;
-  color: #B2B2B2;
+  color: black;
   align-items: center;
   justify-content: space-between;
 }
